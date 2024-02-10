@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FOR YOUUUUU<3</title>
+  
+<style>
+  body {
+    font-family: arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    color: #ff3e6c;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+  
+  img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>I love you so much!!!</h1>
+    <img src="usomg.jpg" alt="Valentine's Day">
+    <p>My lovely girl!,</p>
+    <p>On this special day, I want to express my love and appreciation for you. You mean everything to me, and I am so grateful to have you in my life.</p>
+    <p>You can always rely on me and I wll never leave you alone. I love you more then you can imagine.</p>
+    <p>My heart is yours forever,<br>Lilly<3</p>
+  </div>
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css?family=Lobster');
+
+    
+    body {
+      background-color: #ff92d7;
+    }
+
+    
+    .heart-container {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    
+    .heart {
+      z-index: 999;
+      position: absolute;
+      
+      animation: heartfade 6s linear;
+    }
+
+    
+    .heart:before, .heart:after {
+      content: "";
+      background-color: #fc2a62;
+      position: absolute;
+      height: 30px;
+      width: 45px;
+      border-radius: 15px 0px 0px 15px;
+    }
+
+    
+    .heart:before {
+      transform: rotate(45deg);
+    }
+
+    .heart:after {
+      left: 10.5px;
+      transform: rotate(135deg);
+    }
+
+    
+    @keyframes heartfade {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+
+    
+    .text {
+      font-family: 'Lobster', cursive;
+      font-size: 32px;
+      color: #fc2a62;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="text"></div>
+  
+  <script>
+    
+    function createHeart() {
+      
+      var heart = document.createElement("div");
+      
+      heart.className = "heart";
+      
+      heart.style.left = Math.random() * window.innerWidth + "px";
+      heart.style.top = Math.random() * window.innerHeight + "px";
+      
+      document.body.appendChild(heart);
+      
+      setTimeout(function() {
+        heart.remove();
+      }, 6000);
+    }
+
+    
+    function createHearts() {
+      
+      var count = 50;
+      
+      for (var i = 0; i < count; i++) {
+        
+        setTimeout(createHeart, i * 70);
+      }
+    }
+
+    
+    document.addEventListener("mousedown", function() {
+      
+      createHearts();
+      
+      document.addEventListener("mousemove", createHearts);
+    });
+
+    
+    document.addEventListener("mouseup", function() {
+      
+      document.removeEventListener("mousemove", createHearts);
+    });
+  </script>
+</body>
+</html>
